@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
-import getRampAlgorithms from "../services/rampApi"; // Assuming your API is in the same folder
+import getRampAlgorithms from "../services/rampApi";
 import {
   Chart as ChartJS,
   ArcElement,
