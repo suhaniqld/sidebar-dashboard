@@ -1,0 +1,67 @@
+.sidebar-container {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weather-section {
+    text-align: center;
+}
+
+.weather-header h3 {
+    margin: 0;
+}
+
+.temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature h1 {
+    font-size: 3rem;
+    margin-right: 10px;
+}
+
+.weather-icon i {
+    font-size: 2rem;
+}
+
+.weather-details p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.routes-section {
+    margin-top: 20px;
+}
+
+.route-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.route-item .dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dot.red {
+    background-color: red;
+}
+
+.dot.yellow {
+    background-color: yellow;
+}
+
+.time {
+    font-weight: bold;
+}
