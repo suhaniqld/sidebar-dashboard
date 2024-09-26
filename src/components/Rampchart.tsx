@@ -89,7 +89,7 @@ const RampChart: React.FC = () => {
     <div className="ramp-chart">
       <p className="chart-heading">RAMP CHART</p>
       {/* Hover over the chart to see % labels tooltip */}
-      <Doughnut data={data} options={options} />
+      <Doughnut data={data} options={options}/>
     </div>
   );
 };

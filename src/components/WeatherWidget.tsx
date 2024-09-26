@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { BsCloudSun, BsFillSunFill } from "react-icons/bs"; // Bootstrap icons
+import { BsCloudSun, BsFillSunFill } from "react-icons/bs"; 
 
 const WeatherWidget: React.FC = () => {
   return (
