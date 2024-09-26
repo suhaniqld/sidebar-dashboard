@@ -7,19 +7,10 @@ p {
     color: #ffffff;
     padding: 20px;
     width: 30%;
-    height: 100vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.weather-container, .delayed-routes-container {
-    height: 100vh;
-}
-
-.delayed-routes-container {
-    background-color: #111;
-    padding: 0;
 }
 
 .weather-container .card {
@@ -27,6 +18,11 @@ p {
     width: 400px;
     color: #fff;
     border-radius: 15px;
+}
+
+.delayed-routes-container {
+    background-color: #111;
+    padding: 0;
 }
 
 .delayed-routes-container .card {
@@ -43,11 +39,16 @@ p {
 
 .delayed-routes-container .row {
     border-bottom: 1px solid #444;
+    color: rgb(180, 176, 176)
 }
 
 .delayed-routes-container .row:last-child {
     border-bottom: none;
     margin-bottom: 0;
+}
+
+.delayed-routes-container .text-start {
+    color: rgb(180, 176, 176);
 }
 
 .temperature {
@@ -80,8 +81,21 @@ p {
     color: gray;
 }
 
+.text-highlighted {
+    color: white
+}
+
 .row {
     margin-bottom: 12px;
     padding-top: .2rem;
     padding-bottom: .2rem;
+}
+
+.ramp-chart {
+    width: 320px;
+    margin: auto;
+    background-color: #111;
+    color: gray;
+    margin-top: 20px;
+    padding: 10px;
 }

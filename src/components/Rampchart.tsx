@@ -5,24 +5,27 @@ import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
-  Legend,
   ChartOptions,
 } from "chart.js";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip);
 
 interface AlgorithmCount {
   [key: string]: number;
 }
 
+const algorithmCountObjInitial: AlgorithmCount = {
+  "Algorithm 1": 0,
+  "Algorithm 2": 0,
+  "Algorithm 3": 0,
+  "Algorithm 4": 0,
+  "Algorithm 5": 0,
+};
+
 const RampChart: React.FC = () => {
-  const [algorithmCount, setAlgorithmCount] = useState<AlgorithmCount>({
-    "Algorithm 1": 0,
-    "Algorithm 2": 0,
-    "Algorithm 3": 0,
-    "Algorithm 4": 0,
-    "Algorithm 5": 0,
-  });
+  const [algorithmCount, setAlgorithmCount] = useState<AlgorithmCount>(
+    algorithmCountObjInitial
+  );
 
   useEffect(() => {
     // Update the algorithm count every time new data comes in
@@ -87,9 +90,6 @@ const RampChart: React.FC = () => {
   const options: ChartOptions<"doughnut"> = {
     responsive: true,
     plugins: {
-      legend: {
-        position: "top",
-      },
       tooltip: {
         callbacks: {
           label: (context) => `${context.label}: ${context.raw}%`,
@@ -99,8 +99,8 @@ const RampChart: React.FC = () => {
   };
 
   return (
-    <div style={{ width: "300px", margin: "auto" }}>
-      <h3>Ramp Chart</h3>
+    <div className="ramp-chart">
+      <p>Ramp Chart</p>
       <Doughnut data={data} options={options} />
     </div>
   );
