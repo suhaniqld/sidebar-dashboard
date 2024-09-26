@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Tooltip, ChartOptions } from "chart.js";
 import getRampAlgorithms from "../services/rampApi";
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  ChartOptions,
-} from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip);
 
@@ -45,7 +40,7 @@ const RampChart: React.FC = () => {
       setAlgorithmCount(count);
     };
 
-    // Fetch the data using the provided API
+    // Fetch the data
     getRampAlgorithms(handleUpdate);
   }, []);
 
@@ -68,20 +63,12 @@ const RampChart: React.FC = () => {
           algorithmCount["Algorithm 5"],
         ],
         backgroundColor: [
-          "#66C2A5",
-          "#FC8D62",
-          "#8DA0CB",
-          "#E78AC3",
-          "#A6D854",
+          "#8fbc8f",
+          "#90ee90",
+          "#3cb371",
+          "#009f6b",
+          "#e9ffdb",
         ],
-        hoverBackgroundColor: [
-          "#66C2A5",
-          "#FC8D62",
-          "#8DA0CB",
-          "#E78AC3",
-          "#A6D854",
-        ],
-        borderWidth: 1,
       },
     ],
   };
@@ -92,7 +79,7 @@ const RampChart: React.FC = () => {
     plugins: {
       tooltip: {
         callbacks: {
-          label: (context) => `${context.label}: ${context.raw}%`,
+          label: (context) => `${context.raw}%`,
         },
       },
     },
@@ -101,6 +88,7 @@ const RampChart: React.FC = () => {
   return (
     <div className="ramp-chart">
       <p>Ramp Chart</p>
+      {/* Hover over the chart to see % labels tooltip */}
       <Doughnut data={data} options={options} />
     </div>
   );

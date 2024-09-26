@@ -6,7 +6,7 @@ p {
     background-color: #000;
     color: #ffffff;
     padding: 20px;
-    width: 30%;
+    width: 28%;
     height: 150vh;
     display: flex;
     flex-direction: column;
@@ -82,7 +82,7 @@ p {
 }
 
 .text-highlighted {
-    color: white
+    color: white;
 }
 
 .row {
@@ -92,7 +92,7 @@ p {
 }
 
 .ramp-chart {
-    width: 320px;
+    width: 350px;
     margin: auto;
     background-color: #111;
     color: gray;
