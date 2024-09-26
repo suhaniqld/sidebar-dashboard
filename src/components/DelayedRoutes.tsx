@@ -52,7 +52,7 @@ const DelayedRoutes: React.FC = () => {
                 <div>{route.route}</div>
                 <div className="text-extra-small">
                   {"\u2193 "}
-                  {route.subRoutes.join("  ")}
+                  {route.subRoutes.join(" ")}
                 </div>
               </Col>
               <Col xs={5} className="text-end">

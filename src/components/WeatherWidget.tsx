@@ -9,9 +9,18 @@ const WeatherWidget: React.FC = () => {
         <Card.Body>
           <Row>
             <Col>
-              <p className="text-small text-center">Melbourne</p>
-              <h3 className="text-center">32°</h3>
-              <p className="text-extra-small">Tue 16th 3:46 PM</p>
+              <p data-testid="city" className="text-small text-center">
+                Melbourne
+              </p>
+              <h3 data-testid="temperature" className="text-center">
+                32°
+              </h3>
+              <p
+                data-testid="dateTime"
+                className="text-extra-small text-center"
+              >
+                Tue 16th 3:46 PM
+              </p>
             </Col>
             <Col>
               <BsCloudSun size={80} data-testid="BsCloudSun" />
@@ -31,9 +40,10 @@ const WeatherWidget: React.FC = () => {
               <p>
                 21 <span className="text-small"> kmh</span>
               </p>
-              <p>
-                30° <BsFillSunFill data-testid="BsFillSunFill" />
-              </p>
+              <div>
+                30°
+                <BsFillSunFill data-testid="BsFillSunFill" />
+              </div>
             </Col>
           </Row>
         </Card.Body>
